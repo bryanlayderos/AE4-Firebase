@@ -1,0 +1,24 @@
+<span *ngIf="dataRetrieved">
+    <div *ngFor="let animeCard of animeCardMap | keyvalue">
+        <div class="anime-card-header">
+            <span class="anime-title">{{ animeCard.value.anime.name }}</span>
+            <button class="rate-button" (click)="showAddReviewModal(animeCard.value.anime)">Rate</button>
+            <button class="remove-rating-button remove-anime-button" (click)="removeAnime(animeCard.value.anime.id)"><strong>X</strong></button>
+        </div>
+        <span *ngIf="animeCard.value.reviews">
+            <div *ngFor="let review of animeCard.value.reviews">
+                <div class="rating-card">
+                    <span class="rating">{{ review.rating }}</span>
+                    <button class="remove-rating-button" (click)="removeRating(review.id)"><strong>X</strong></button>
+                    <p class="review-note">{{ review.note }}</p>
+                </div>
+            </div>
+        </span>
+        <br>
+    </div>
+</span>
+<span *ngIf="!dataRetrieved">
+    <div class="flex-column">
+        <p>Retrieving data...</p>
+    </div>
+</span>

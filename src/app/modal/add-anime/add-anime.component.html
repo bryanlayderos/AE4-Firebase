@@ -1,0 +1,18 @@
+<div>
+    <div class="align-to-right">
+        <button class="close-modal-button" (click)="closeModal()">X</button>
+    </div>
+    <div *ngIf="!isLoading">
+        <form class="flex-column add-anime-form" (ngSubmit)="addAnime()">
+            <p class="anime-title">Add Anime</p>
+            <input type="text" name="anime-name" placeholder="Add anime" class="add-anime-name-field" [(ngModel)]="animeName" required>
+            <small class="text-error" *ngIf="showErrors">Anime name is required</small>
+            <button class="add-anime-button">Add Anime</button>
+        </form>
+    </div>
+    <div class="flex-column" *ngIf="isLoading">
+        <p>Adding anime...</p>
+    </div>
+    <br>
+    <br>
+</div>

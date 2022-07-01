@@ -1,0 +1,168 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page-container{
+    background-color: #dddddd;
+    width: 100vw;
+    height: 100%;
+}
+
+.content{
+    background-color: white;
+    width: 50vw;
+    height: 100vh;
+    margin: auto;
+}
+
+.page-header, .anime-list{
+    padding: 3rem 4rem;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.align-to-right{
+    text-align: end;
+}
+
+.close-modal-button{
+    border: none;
+    background: none;
+    margin: 1.2rem;
+}
+
+.title, .anime-title, .rating{
+    font-weight: bold;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.add-anime-button{
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.anime-title{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.rate-button {
+    background-color: white;
+    border: 1px solid black;
+    padding: .25rem 1.25rem;
+}
+
+.anime-card-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.review-note{
+    margin-top: .5rem;
+    font-size: .85rem;
+}
+
+.rating-card{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.remove-rating-button{
+    background: none;
+    border: none;
+}
+
+.rating{
+    margin-right: 1rem;
+}
+
+.add-anime-form{
+    margin: 2rem;
+}
+
+.add-anime-form *{
+    margin: 1rem;
+}
+
+.add-anime-name-field, .rating-field{
+    font-size: 1.2rem;
+}
+
+.text-error{
+    color: red;
+}
+
+.rating-field{
+    padding: .2rem .8rem;
+}
+
+.remove-anime-button{
+    margin-left: 1rem;
+}

@@ -1,0 +1,26 @@
+<div>
+    <div class="align-to-right">
+        <button class="close-modal-button" (click)="closeModal()">X</button>
+    </div>
+    <div *ngIf="!isLoading">
+        <form class="flex-column add-anime-form" (ngSubmit)="rateAnime()">
+            <p class="anime-title">Add Review</p>
+            <select name="rating" class="rating-field" [(ngModel)]="rateRequest.rating" required>
+                <option name="excellent" value="Excellent" selected>Excellent</option>
+                <option name="great" value="Great">Great</option>
+                <option name="ok" value="Ok">Ok</option>
+                <option name="bad" value="Bad">Bad</option>
+                <option name="terrible" value="Terrible">Terrible</option>
+            </select>
+            <small class="text-error" *ngIf="showErrors">Rating is required</small>
+            <input type="text" name="rate-note" placeholder="Add review" class="add-anime-name-field" [(ngModel)]="rateRequest.note" required>
+            <small class="text-error" *ngIf="showErrors">Additional note is required</small>
+            <button class="add-anime-button">Add Review</button>
+        </form>
+    </div>
+    <div class="flex-column" *ngIf="isLoading">
+        <p>Adding review...</p>
+        <br>
+        <br>
+    </div>
+</div>
